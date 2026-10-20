@@ -1,17 +1,17 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "KNΩSOS",
+  "productName": "KNΩSOS Admin",
   "version": "1.0.0",
-  "identifier": "com.knwsos.desktop",
+  "identifier": "com.knwsos.admin",
   "build": {
-    "frontendDist": "https://knwsos.com"
+    "frontendDist": "https://knwsos.com/admin"
   },
   "app": {
     "withGlobalTauri": false,
     "windows": [
       {
         "label": "main",
-        "title": "KNΩSOS",
+        "title": "KNΩSOS Admin",
         "width": 1280,
         "height": 820,
         "minWidth": 800,
@@ -22,9 +22,9 @@
   },
   "bundle": {
     "active": true,
-    "category": "Education",
-    "shortDescription": "Science, made clear.",
-    "longDescription": "Explore clear, engaging science articles with KNΩSOS.",
+    "category": "Business",
+    "shortDescription": "KNΩSOS administration",
+    "longDescription": "Manage KNΩSOS articles through the protected admin dashboard.",
     "icon": [
       "icons/icon.icns",
       "icons/icon.ico"
