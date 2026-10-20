@@ -1,7 +1,7 @@
 [package]
-name = "knwsos-desktop"
+name = "knwsos-admin-desktop"
 version = "1.0.0"
-description = "KNΩSOS desktop app"
+description = "KNΩSOS Admin desktop app"
 authors = ["KNΩSOS"]
 edition = "2021"
 
