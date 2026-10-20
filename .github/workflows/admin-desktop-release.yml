@@ -1,0 +1,68 @@
+name: KNΩSOS Admin desktop release
+
+on:
+  push:
+    tags:
+      - "admin-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build on ${{ matrix.platform }}
+    runs-on: ${{ matrix.platform }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos-latest
+            target: aarch64-apple-darwin
+            bundles: dmg
+          - platform: macos-latest
+            target: x86_64-apple-darwin
+            bundles: dmg
+          - platform: windows-latest
+            target: x86_64-pc-windows-msvc
+            bundles: nsis
+
+    defaults:
+      run:
+        working-directory: desktop
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+
+      - name: Install desktop dependencies
+        run: npm install
+
+      - name: Generate app icons
+        run: |
+          node -e "const fs = require('node:fs'); fs.writeFileSync('icons/knwsos-icon.png', Buffer.from(fs.readFileSync('icons/knwsos-icon.png.base64', 'utf8'), 'base64'))"
+          npm run tauri -- icon icons/knwsos-icon.png --output src-tauri/icons
+
+      - name: Build and publish installer
+        uses: tauri-apps/tauri-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: desktop
+          tagName: ${{ github.ref_name }}
+          releaseName: "KNΩSOS Admin ${{ github.ref_name }}"
+          releaseBody: |
+            Download the installer for your computer:
+            - macOS Apple Silicon: choose the aarch64 DMG.
+            - macOS Intel: choose the x64 DMG.
+            - Windows: choose the x64 setup EXE.
+            The app opens https://knwsos.com/admin and asks the website to authenticate you.
+          releaseDraft: false
+          prerelease: false
+          args: --target ${{ matrix.target }} --bundles ${{ matrix.bundles }}
