@@ -1,8 +1,8 @@
 {
-  "name": "knwsos-desktop",
+  "name": "knwsos-admin-desktop",
   "private": true,
   "version": "1.0.0",
-  "description": "Desktop wrapper for the KNΩSOS website",
+  "description": "Desktop app for the protected KNΩSOS admin dashboard",
   "scripts": { "tauri": "tauri" },
   "devDependencies": { "@tauri-apps/cli": "^2.0.0" }
 }
