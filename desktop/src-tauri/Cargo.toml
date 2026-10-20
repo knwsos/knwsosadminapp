@@ -1,0 +1,12 @@
+[package]
+name = "knwsos-desktop"
+version = "1.0.0"
+description = "KNΩSOS desktop app"
+authors = ["KNΩSOS"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2" }
+
+[dependencies]
+tauri = { version = "2" }

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "KNΩSOS",
+  "version": "1.0.0",
+  "identifier": "com.knwsos.desktop",
+  "build": {
+    "frontendDist": "https://knwsos.com"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [
+      {
+        "label": "main",
+        "title": "KNΩSOS",
+        "width": 1280,
+        "height": 820,
+        "minWidth": 800,
+        "minHeight": 600,
+        "center": true
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "category": "Education",
+    "shortDescription": "Science, made clear.",
+    "longDescription": "Explore clear, engaging science articles with KNΩSOS.",
+    "icon": [
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "macOS": {
+      "signingIdentity": "-"
+    }
+  }
+}

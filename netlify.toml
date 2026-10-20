@@ -1,0 +1,28 @@
+[build]
+  publish = "public"
+  command = "npm run build"
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/.netlify/functions/sitemap"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/article/:id"
+  to = "/.netlify/functions/article?id=:id"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200
+[[redirects]]
+  from = "/articles"
+  to = "/articles.html"
+  status = 200

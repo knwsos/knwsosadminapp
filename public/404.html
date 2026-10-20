@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#081525">
+  <title>Page not found — KNΩSOS</title>
+  <meta name="description" content="This page seems to have drifted out of orbit. Find your way back to KNΩSOS.">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body.error-page{min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;background:radial-gradient(ellipse at 78% 46%,#17334a 0%,#0d2033 34%,#081525 72%)}
+    .error-page header{width:100%;flex-shrink:0}
+    .error-page main{width:100%;max-width:1180px;margin:auto;padding:78px 6vw 90px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:48px;min-height:620px}
+    .error-copy{position:relative;z-index:1}
+    .error-copy small{font-size:11px;letter-spacing:2.6px;font-weight:700;color:var(--g)}
+    .error-copy h1{font-size:clamp(46px,6vw,74px);letter-spacing:-3.5px;line-height:1.02;margin:20px 0 16px;max-width:620px}
+    .error-copy p{max-width:480px;color:var(--m);font-size:17px;line-height:1.75;margin:0}
+    .error-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .error-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 19px;border-radius:6px;font-weight:700}
+    .error-home{background:var(--g);color:var(--n)}
+    .error-articles{border:1px solid #526b84;color:var(--c);transition:border-color .2s,color .2s}
+    .error-articles:hover{border-color:var(--g);color:var(--g)}
+    .error-art{position:relative;display:grid;place-items:center;min-height:370px}
+    .error-orbit{position:absolute;width:min(33vw,340px);aspect-ratio:1;border:1px solid #d6ad6366;border-radius:50%;transform:rotate(-24deg)}
+    .error-orbit:before,.error-orbit:after{content:"";position:absolute;border:1px solid #d6ad6333;border-radius:50%;inset:26px;transform:rotate(48deg) scaleX(1.55)}
+    .error-orbit:after{inset:55px;transform:rotate(-52deg) scaleX(1.4)}
+    .error-planet{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 33% 28%,#f0d292 0,#d6ad63 27%,#86633a 66%,#2b3951 100%);box-shadow:0 0 70px #d6ad6333, inset -18px -16px 28px #081525aa;color:#081525;font:600 58px Georgia,serif}
+    .error-star{position:absolute;color:#f4efe4;font-size:17px;opacity:.8}
+    .error-star.one{top:13%;right:16%}.error-star.two{bottom:16%;left:8%;font-size:12px}.error-star.three{top:27%;left:4%;color:var(--g);font-size:11px}
+    .error-code{position:absolute;right:3%;bottom:4%;font-size:clamp(70px,10vw,126px);font-weight:700;letter-spacing:-10px;color:#f4efe40d;line-height:1}
+    .error-page footer{width:100%;flex-shrink:0}
+    .error-page a:focus-visible{outline:2px solid var(--g);outline-offset:4px}
+    @media(max-width:760px){.error-page main{grid-template-columns:1fr;gap:10px;min-height:unset;padding:65px 24px 48px}.error-copy h1{font-size:50px}.error-art{min-height:280px;grid-row:1}.error-orbit{width:235px}.error-planet{width:112px;height:112px;font-size:44px}.error-code{right:6%;bottom:0;font-size:78px}.error-page footer{padding:28px 24px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body class="error-page">
+  <header>
+    <a class="logo" href="/">kn<span>Ω</span>sos</a>
+    <nav aria-label="Main navigation">
+      <a href="/">Home</a><a href="/articles">Articles</a><a href="/#junior">Junior</a><a href="/#about">About</a>
+    </nav>
+    <a class="pill" href="/articles">Explore ⌕</a>
+  </header>
+  <main>
+    <div class="error-copy">
+      <small>404 · OUT OF ORBIT</small>
+      <h1>This page seems to have drifted away.</h1>
+      <p>The page you’re looking for may have moved, or the address might be slightly off. Let’s get you back to something interesting.</p>
+      <div class="error-actions">
+        <a class="error-home" href="/">Back to home <span aria-hidden="true">&nbsp;→</span></a>
+        <a class="error-articles" href="/articles">Explore articles</a>
+      </div>
+    </div>
+    <div class="error-art" aria-hidden="true">
+      <span class="error-star one">✦</span><span class="error-star two">✦</span><span class="error-star three">✧</span>
+      <div class="error-orbit"></div><div class="error-planet">Ω</div><div class="error-code">404</div>
+    </div>
+  </main>
+  <footer><span class="logo">kn<span>Ω</span>sos</span><span>Science, made clear.</span></footer>
+</body>
+</html>

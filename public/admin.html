@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin — knΩsos</title><link rel="stylesheet" href="/admin.css"></head><body><div id="login" class="login"><div><a class="logo" href="/">kn<span>Ω</span>sos</a><small>ADMIN AREA</small><h1>Welcome back.</h1><p>Manage your science library.</p><form id="loginForm"><label>Password<input id="password" type="password" required></label><button>Sign in</button><div id="error"></div></form><a href="/">← Back to site</a></div></div><div id="dash" class="hidden"><header><a class="logo" href="/">kn<span>Ω</span>sos</a><div><a href="/" target="_blank">View site ↗</a><button id="logout">Log out</button></div></header><main><div class="top"><div><small>CONTENT MANAGER</small><h1>Articles</h1><p>Create, edit, publish or remove articles.</p></div><button id="new">+ New article</button></div><div id="msg"></div><div id="list"></div><section id="editor" class="hidden"><div class="top"><div><small>EDITOR</small><h2 id="edTitle">New article</h2></div><button id="close">Close</button></div><form id="form"><input id="id" type="hidden"><label>Title<input id="title" required></label><label>
+  Category
+
+  <select id="category" required>
+
+    <option value="Biology">
+      Biology
+    </option>
+
+    <option value="Physics">
+      Physics
+    </option>
+
+    <option value="Chemistry">
+      Chemistry
+    </option>
+
+    <option value="Medicine &amp; Health">
+      Medicine &amp; Health
+    </option>
+
+  </select>
+</label><label>Short description<textarea id="excerpt" rows="3"></textarea></label><label>Image URL<input id="image" placeholder="https://…"></label><label>Article content<textarea id="content" rows="14"></textarea></label> <label for="video">YouTube Video URL</label>
+<input
+  id="video"
+  type="url"
+  placeholder="https://www.youtube.com/watch?v=..."
+> <label for="sources">Sources</label>
+<textarea
+  id="sources"
+  rows="5"
+  placeholder="NASA | https://www.nasa.gov/...
+Britannica | https://www.britannica.com/...
+National Geographic | https://www.nationalgeographic.com/..."></textarea><label><input id="published" type="checkbox"> Published</label><div class="actions"><button type="button" id="cancel">Cancel</button><button>Save article</button></div></form></section></main></div><script src="/admin.js"></script></body></html>
